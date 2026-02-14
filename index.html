@@ -5,23 +5,46 @@
 <title>San Valentin 2026</title>
 
 <style>
+
 body{
     margin:0;
     font-family: Calibri, sans-serif;
     background-color:#E0FAD2;
+    overflow:hidden;
+}
+
+/* pantalla inicial */
+#inicio{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#E0FAD2;
     display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    cursor:pointer;
+    z-index:10;
+}
+
+/* contenido principal */
+#contenido{
+    display:none;
+    height:100vh;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    height:100vh;
     text-align:center;
 }
 
+/* titulo */
 h1{
     font-size:60px;
     margin-bottom:40px;
+    animation:fadeIn 2s;
 }
 
+/* botones */
 .botones{
     display:flex;
     gap:25px;
@@ -40,9 +63,10 @@ button{
 
 button:hover{
     background-color:#618C42;
-    transform:scale(1.05);
+    transform:scale(1.1);
 }
 
+/* cuadro */
 .cuadro{
     margin-top:30px;
     background-color:rgba(97,140,66,0.6);
@@ -52,19 +76,50 @@ button:hover{
     display:none;
     border-radius:12px;
     max-width:80%;
+    animation:fadeIn 1s;
 }
 
+/* imagen */
 img{
     margin-top:30px;
     max-width:90%;
     border-radius:15px;
     display:none;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:fadeIn 1s;
 }
+
+/* corazones */
+.corazon{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:subir linear infinite;
+}
+
+@keyframes subir{
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- pantalla inicio -->
+<div id="inicio" onclick="entrar()">
+💚 TOUCH TO ENTER 💚
+</div>
+
+<!-- contenido -->
+<div id="contenido">
 
 <h1>SAN VALENTIN 2026</h1>
 
@@ -80,24 +135,62 @@ Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 <img id="imagen"
 src="https://raw.githubusercontent.com/tadeocolina15-spec/Sanvalentin26/main/ticket.jpg.jpg">
 
-<!-- MUSICA -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ"
-frameborder="0"
+</div>
+
+<!-- musica -->
+<iframe id="musica" width="0" height="0"
+src=""
 allow="autoplay">
 </iframe>
 
 <script>
+
+/* entrar */
+function entrar(){
+
+document.getElementById("inicio").style.display="none";
+
+let contenido=document.getElementById("contenido");
+contenido.style.display="flex";
+
+/* activar musica */
+document.getElementById("musica").src=
+"https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ";
+
+/* corazones */
+setInterval(crearCorazon,300);
+
+}
+
+/* botones */
 function mostrarMensaje(){
-    document.getElementById("mensaje").style.display="block";
-    document.getElementById("imagen").style.display="none";
+document.getElementById("mensaje").style.display="block";
+document.getElementById("imagen").style.display="none";
 }
 
 function mostrarRegalo(){
-    document.getElementById("imagen").style.display="block";
-    document.getElementById("mensaje").style.display="none";
+document.getElementById("imagen").style.display="block";
+document.getElementById("mensaje").style.display="none";
 }
+
+/* corazones */
+function crearCorazon(){
+
+let corazon=document.createElement("div");
+corazon.className="corazon";
+corazon.innerHTML="💚";
+
+corazon.style.left=Math.random()*100+"vw";
+corazon.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(corazon);
+
+setTimeout(()=>{corazon.remove();},7000);
+
+}
+
 </script>
 
 </body>
 </html>
+
