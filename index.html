@@ -5,81 +5,112 @@
 <title>San Valentin 2026</title>
 
 <style>
-body {
-  background-color: #E0FAD2;
-  font-family: "Times New Roman", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  flex-direction: column;
-  text-align: center;
+
+body{
+margin:0;
+font-family: Calibri, sans-serif;
+background-color:#E0FAD2;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 30px;
+/* TITULO */
+h1{
+font-size:45px;
+margin-bottom:40px;
 }
 
-button {
-  font-family: "Times New Roman", serif;
-  padding: 12px 30px;
-  margin: 10px;
-  font-size: 16px;
-  border: 1px solid black;
-  background-color: white;
-  cursor: pointer;
+/* PANEL MENSAJE */
+.panel{
+background-color:rgba(97,140,66,0.6);
+padding:25px;
+border-radius:12px;
+color:white;
+font-size:24px;
+max-width:500px;
+display:none;
+margin-bottom:20px;
 }
 
-button:hover {
-  background-color: #f5f5f5;
+/* IMAGEN REGALO */
+.regalo{
+display:none;
+margin-top:20px;
 }
 
-#mensaje, #foto {
-  margin-top: 20px;
-  display: none;
+.regalo img{
+width:600px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-img {
-  max-width: 300px;
-  margin-top: 15px;
-  border-radius: 10px;
+/* BOTONES */
+.botones{
+display:flex;
+gap:25px;
 }
+
+button{
+font-family: Calibri, sans-serif;
+font-size:20px;
+padding:14px 35px;
+border:none;
+border-radius:10px;
+background-color:#618C42;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background-color:#4e6f35;
+transform:scale(1.05);
+}
+
 </style>
 
 <script>
-function mostrarMensaje() {
-  document.getElementById("mensaje").style.display = "block";
+
+function abrirMensaje(){
+document.getElementById("mensaje").style.display="block";
+document.getElementById("regalo").style.display="none";
 }
 
-function mostrarFoto() {
-  document.getElementById("foto").style.display = "block";
+function abrirRegalo(){
+document.getElementById("mensaje").style.display="none";
+document.getElementById("regalo").style.display="block";
 }
+
 </script>
 
 </head>
 
 <body>
 
-<!-- MUSICA DE FONDO DESDE YOUTUBE -->
+<!-- MUSICA -->
 <iframe width="0" height="0"
-src="https://www.youtube.com/embed/0hQ9Y-rNdbA?autoplay=1&loop=1&playlist=0hQ9Y-rNdbA"
+src="https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ"
 frameborder="0"
 allow="autoplay">
 </iframe>
 
 <h1>SAN VALENTIN 2026</h1>
 
-<button onclick="mostrarMensaje()">READ ME</button>
-<button onclick="mostrarFoto()">GIFT</button>
-
-<div id="mensaje">
-  <p>feliz segundo san valebtin espero qwue te gustee tuprimer regalito</p>
+<div id="mensaje" class="panel">
+Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 </div>
 
-<div id="foto">
-  <img src="foto.jpg">
+<div id="regalo" class="regalo">
+<img src="ticket.jpg">
+</div>
+
+<div class="botones">
+<button onclick="abrirMensaje()">READ ME</button>
+<button onclick="abrirRegalo()">GIFT</button>
 </div>
 
 </body>
