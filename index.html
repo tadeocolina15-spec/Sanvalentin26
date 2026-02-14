@@ -18,13 +18,11 @@ height:100vh;
 text-align:center;
 }
 
-/* TITULO */
 h1{
 font-size:50px;
 margin-bottom:40px;
 }
 
-/* PANEL MENSAJE */
 .panel{
 background-color:rgba(97,140,66,0.6);
 padding:25px;
@@ -36,7 +34,6 @@ display:none;
 margin-bottom:20px;
 }
 
-/* IMAGEN REGALO */
 .regalo{
 display:none;
 margin-top:20px;
@@ -49,15 +46,13 @@ border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* BOTONES LADO A LADO */
 .botones{
 display:flex;
 gap:30px;
-margin-top:10px;
 }
 
 button{
-font-family: Calibri, sans-serif;
+font-family: Calibri;
 font-size:22px;
 padding:15px 40px;
 border:none;
@@ -65,12 +60,6 @@ border-radius:10px;
 background-color:#618C42;
 color:white;
 cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background-color:#4e6f35;
-transform:scale(1.05);
 }
 
 </style>
@@ -93,13 +82,6 @@ document.getElementById("regalo").style.display="block";
 
 <body>
 
-<!-- MUSICA DE FONDO -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ"
-frameborder="0"
-allow="autoplay">
-</iframe>
-
 <h1>SAN VALENTIN 2026</h1>
 
 <div id="mensaje" class="panel">
@@ -107,7 +89,7 @@ Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 </div>
 
 <div id="regalo" class="regalo">
-<img src="./ticket.jpg">
+<img src="https://raw.githubusercontent.com/tadeocolina15-spec/Sanvalentin26/main/ticket.jpg">
 </div>
 
 <div class="botones">
@@ -115,5 +97,12 @@ Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 <button onclick="abrirRegalo()">GIFT</button>
 </div>
 
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
 </body>
 </html>
+
