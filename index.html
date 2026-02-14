@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>San Valentín 2026</title>
+<title>San Valentin 2026</title>
 
 <style>
 body{
@@ -10,10 +10,11 @@ body{
     font-family: Calibri, sans-serif;
     background-color:#E0FAD2;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     height:100vh;
-    flex-direction:column;
+    text-align:center;
 }
 
 h1{
@@ -23,7 +24,7 @@ h1{
 
 .botones{
     display:flex;
-    gap:20px;
+    gap:25px;
 }
 
 button{
@@ -33,25 +34,32 @@ button{
     cursor:pointer;
     background-color:rgba(97,140,66,0.6);
     color:white;
-    border-radius:10px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+button:hover{
+    background-color:#618C42;
+    transform:scale(1.05);
 }
 
 .cuadro{
     margin-top:30px;
     background-color:rgba(97,140,66,0.6);
-    padding:20px;
+    padding:25px;
     font-size:28px;
     color:white;
     display:none;
-    border-radius:10px;
+    border-radius:12px;
     max-width:80%;
 }
 
 img{
-    margin-top:20px;
+    margin-top:30px;
     max-width:90%;
-    border-radius:10px;
+    border-radius:15px;
     display:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 </style>
 </head>
@@ -66,10 +74,11 @@ img{
 </div>
 
 <div id="mensaje" class="cuadro">
-Feliz segundo san valentin mi amor, espero que te guste tu primer regalito
+Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 </div>
 
-<img id="imagen" src="ticket.jpg.jpg">
+<img id="imagen"
+src="https://raw.githubusercontent.com/tadeocolina15-spec/Sanvalentin26/main/ticket.jpg.jpg">
 
 <!-- MUSICA -->
 <iframe width="0" height="0"
@@ -80,16 +89,15 @@ allow="autoplay">
 
 <script>
 function mostrarMensaje(){
-document.getElementById("mensaje").style.display="block";
-document.getElementById("imagen").style.display="none";
+    document.getElementById("mensaje").style.display="block";
+    document.getElementById("imagen").style.display="none";
 }
 
 function mostrarRegalo(){
-document.getElementById("imagen").style.display="block";
-document.getElementById("mensaje").style.display="none";
+    document.getElementById("imagen").style.display="block";
+    document.getElementById("mensaje").style.display="none";
 }
 </script>
 
 </body>
 </html>
-
