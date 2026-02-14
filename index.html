@@ -19,17 +19,17 @@ text-align:center;
 }
 
 h1{
-font-size:50px;
+font-size:55px;
 margin-bottom:40px;
 }
 
 .panel{
 background-color:rgba(97,140,66,0.6);
 padding:25px;
-border-radius:12px;
+border-radius:15px;
 color:white;
-font-size:26px;
-max-width:600px;
+font-size:28px;
+max-width:700px;
 display:none;
 margin-bottom:20px;
 }
@@ -40,26 +40,33 @@ margin-top:20px;
 }
 
 .regalo img{
-width:700px;
+width:750px;
 max-width:90%;
-border-radius:12px;
+border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 .botones{
 display:flex;
 gap:30px;
+margin-top:10px;
 }
 
 button{
-font-family: Calibri;
+font-family: Calibri, sans-serif;
 font-size:22px;
-padding:15px 40px;
+padding:15px 45px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 background-color:#618C42;
 color:white;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background-color:#4e6f35;
+transform:scale(1.05);
 }
 
 </style>
@@ -89,7 +96,7 @@ Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 </div>
 
 <div id="regalo" class="regalo">
-<img src="https://raw.githubusercontent.com/tadeocolina15-spec/Sanvalentin26/main/ticket.jpg">
+<img src="https://tadeocolina15-spec.github.io/Sanvalentin26/TICKET.JPG" alt="Ticket regalo">
 </div>
 
 <div class="botones">
@@ -97,6 +104,7 @@ Feliz segundo san valentin mi amor, espero que te guste tu primer regalito 💚
 <button onclick="abrirRegalo()">GIFT</button>
 </div>
 
+<!-- Música de fondo -->
 <iframe width="0" height="0"
 src="https://www.youtube.com/embed/jbgwkgVW3HQ?autoplay=1&loop=1&playlist=jbgwkgVW3HQ"
 frameborder="0"
@@ -105,4 +113,3 @@ allow="autoplay">
 
 </body>
 </html>
-
